@@ -38,7 +38,7 @@
                 <div class="handsCatImgInput">
                     <img src="../image/handsCat.png" alt="">
                 </div>
-                <input type="text" id="inputField" placeholder="Nhập tên..." readonly>
+                <input type="text" id="inputField" placeholder="You..." readonly>
             </div>
             <div class="buttonLove">
                 <div class="cricleBtn"></div>
@@ -171,7 +171,7 @@
     }
 
     const inputField = document.getElementById('inputField');
-    const textToType = "Trương Văn An";
+    const textToType = "Crush";
     const typingSpeed = 100; // milliseconds per character
 
     let charIndex = 0;
@@ -215,8 +215,8 @@
     // .textLetter text h2
     let indexText = 0;
     let textLetter = document.querySelector('.textLetter h2');
-    const textLetterH2 = "Gửi em!";
-    let timoutTextLetter;
+    const textLetterH2 = "Gửi em";
+    let timeoutTextLetter;
 
     function textCharLetter(){
         if (indexText < textLetterH2.length) {
@@ -225,7 +225,7 @@
             setTimeout(indexText, 100);
         }
         else{
-            clearInterval(timoutTextLetter);
+            clearInterval(timeoutTextLetter);
             setTimeout(()=>{
                 funcTimeoutLetterContent()
             },500)
@@ -234,17 +234,16 @@
     function funcTimeoutLetter(){
         indexText = 0; // Reset indexText
         textLetter.textContent = ''; // Xóa nội dung hiện tại của textLetter
-        clearInterval(timoutTextLetter);
-        timoutTextLetter =  setInterval(()=>{
+        clearInterval(timeoutTextLetter);
+        timeoutTextLetter =  setInterval(()=>{
                 textCharLetter();
             }, 200)
     }
 
-    // chữ của thư bạn muốn gửi
     let indexTextContent = 0;
     let textLetterContent = document.querySelector('.contentLetter');
-    const textLetterP = "1 tuần có 7 ngày. 1 ngày có 24 giờ. 1 giờ có 60 phút. 1 phút có 60 giây. Không có một ngày hoặc giờ mà tôi không nhớ bạn. Không có giây phút nào mà anh không nghĩ đến cậu. Tâm hồn và trái tim tôi tràn ngập bạn. Nhớ và yêu em nhiều lắm.";
-    let timoutTextLetterContent;
+    const textLetterP = "Lá thư đã chuẩn bị từ lâu nhưng bây giờ mới được gửi. Luôn tươi cười, vui vẻ và hạnh phúc nhé cô bé. Yêu em";
+    let timeoutTextLetterContent;
     function textCharLetterContent(){
         if (indexTextContent < textLetterP.length) {
             textLetterContent.textContent += textLetterP[indexTextContent];
@@ -252,15 +251,15 @@
             setTimeout(indexTextContent, 100);
         }
         else{
-            clearInterval(timoutTextLetterContent)
+            clearInterval(timeoutTextLetterContent)
 
         }
     }
     function funcTimeoutLetterContent(){
         indexTextContent = 0; // Reset indexTextContent
         textLetterContent.textContent = ''; // Xóa nội dung hiện tại của textLetter
-        clearInterval(timoutTextLetterContent);
-        timoutTextLetterContent =  setInterval(()=>{
+        clearInterval(timeoutTextLetterContent);
+        timeoutTextLetterContent =  setInterval(()=>{
             textCharLetterContent();
             }, 100)
     }
@@ -305,7 +304,7 @@
     document.querySelector(".fa-xmark").addEventListener("click", function(){
         indexTextContent = 0; // Reset indexTextContent
         textLetterContent.textContent = ''; // Xóa nội dung hiện tại của textLetter
-        clearInterval(timoutTextLetterContent)
+        clearInterval(timeoutTextLetterContent)
         $(".wrapperLetterForm").fadeOut()
     })
 </script>
