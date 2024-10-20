@@ -700,5 +700,23 @@ body{
     width: 100%;
 }
 
+@media only screen and (max-width: 426px) {
+    .boxCar {
+        transform: translateX(-350px);
+    }
 
+    .formInput {
+        width: 80%;
+    }
+
+    .giftbox .img{
+        left: -8px;
+    }
+
+    @keyframes car{
+        100%{
+            transform: translateX(36px);
+        }
+    }
+}
 
